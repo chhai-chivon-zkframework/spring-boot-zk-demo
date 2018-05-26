@@ -1,5 +1,5 @@
 <zk>
-    <div>
+    <div sclass="top_header">
         <label>Header</label>
     </div>
 </zk>

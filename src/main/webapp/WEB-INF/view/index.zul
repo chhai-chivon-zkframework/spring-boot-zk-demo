@@ -1,45 +1,19 @@
-<zk>
-    <separator>
-    </separator>
-    <window
-            vflex="true"
-            position="center"
-            apply="com.chhaichivon.springzk.view.MasterView">
 
-            <hbox align="center">
-                Keyword:
-                <textbox id="keywordBox" />
-                <button id="searchButton" label="Search" image="/widgets/getting_started/img/search.png" />
-            </hbox>
-        <!--    <listbox id="carListbox" emptyMessage="No car found in the result" height="160px" style="margin-top:10px">-->
-        <!--        <listhead>-->
-        <!--            <listheader label="Model" />-->
-        <!--            <listheader label="Make" />-->
-        <!--            <listheader label="Price" width="20%"/>-->
-        <!--        </listhead>-->
-        <!--        <template name="model">-->
-        <!--            <listitem>-->
-        <!--                <listcell label="${each.model}"></listcell>-->
-        <!--                <listcell label="${each.make}"></listcell>-->
-        <!--                <listcell>$<label value="${each.price}" /></listcell>-->
-        <!--            </listitem>-->
-        <!--        </template>-->
-        <!--    </listbox>-->
-            <hbox style="margin-top:20px" id="detailBox" visible="false">
-                <image id="previewImage" style="padding:10px" />
-                <vbox>
-                    <hlayout>
-        <!--                Model : <label id="modelLabel" style="font-weight:bold"/>-->
-                    </hlayout>
-                    <hlayout>
-        <!--                Make : <label id="makeLabel" style="font-weight:bold"/>-->
-                    </hlayout>
-                    <hlayout>
-                        Price :
-        <!--                <span>$<label id="priceLabel" style="font-weight:bold"/></span>-->
-                    </hlayout>
-                    <label id="descriptionLabel" />
-                </vbox>
-            </hbox>
-    </window>
+<?link rel="stylesheet" type="text/css" href="./../../static/resources/css/style.css"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="./template.zul"?>
+<zk>
+    <hbox self="@define(content)" vflex="1" hflex="1" align="center"
+          pack="center" spacing="20px">
+        <vlayout>
+            <window
+                    vflex="true"
+                    position="center"
+                    apply="com.chhaichivon.springzk.view.MasterView">
+
+
+                <textbox id="keywordBox" />
+                <button id="searchButton" label="Search" image="./../../static/resources/image/zk_logo.png" />
+            </window>
+        </vlayout>
+    </hbox>
 </zk>
